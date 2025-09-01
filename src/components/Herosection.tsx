@@ -5,7 +5,7 @@ const Herosection = () => {
   return (
     <div className="flex justify-center items-center space-x-4 flex-wrap space-y-4">
       <motion.div
-        className="flex shadow-2xl p-10 border-1 mr-10 rounded-2xl flex-col items-start space-y-5 max-w-2xl"
+        className="flex shadow-2xl p-10 border-1  rounded-2xl flex-col items-start space-y-5 max-w-2xl"
         initial={{ opacity: 0, x: -60 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
@@ -15,7 +15,7 @@ const Herosection = () => {
             return <span>{item}</span>;
           })}{" "}
         </span>
-        <span className="font-black text-shadow-2xl  text-black text-3xl">
+        <span className="font-black text-left text-shadow-2xl  text-black text-3xl">
           {"Priyanshu Sonowal".split("").map((item, idx) => {
             return <span>{item}</span>;
           })}{" "}
