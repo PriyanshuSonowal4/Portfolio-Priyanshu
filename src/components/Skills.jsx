@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const skills = [
   "Python",
@@ -21,25 +22,32 @@ const skills = [
 
 const Skills = () => {
   return (
-    <div className="bg-white mt-30">
+    <motion.div
+      className="mt-30"
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 0.7, ease: "easeOut" }}
+    >
       <h1 className="text-transparent bg-clip-text w-fit mx-auto text-xl bg-gradient-to-r from-indigo-600 to-pink-400 font-black">
         SKILLS
       </h1>
       <div className="flex justify-center mt-5 flex-wrap gap-3">
-        {skills.map((skill, idx) => {
-          return (
-            <div className="relative" key={idx}>
-              <div className="absolute inset-1 bg-gradient-to-r from-indigo-300 to-pink-100 blur-lg  bg-blue-200" />
-
-              <div
-                className="w-fit p-2 shadow-2xl shadow-black relative rounded-full bg-transparent text-black"
-                key={idx}
-              >
-                {skill}
-              </div>
+        {skills.map((skill, idx) => (
+          <motion.div
+            className="relative"
+            key={idx}
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.5, delay: idx * 0.05, ease: "easeOut" }}
+          >
+            <div className="absolute inset-1 bg-gradient-to-r from-indigo-300 to-pink-100 blur-lg  bg-blue-200" />
+            <div className="w-fit p-2 shadow-2xl shadow-black relative rounded-full bg-transparent text-black">
+              {skill}
             </div>
-          );
-        })}
+          </motion.div>
+        ))}
       </div>
       <h1 className="text-transparent bg-clip-text mt-5 w-fit mx-auto text-xl bg-gradient-to-r from-indigo-600 to-pink-400 font-black">
         Other Skills
@@ -51,7 +59,7 @@ const Skills = () => {
           Crypto Trading
         </div>
       </div>
-    </div>
+  </motion.div>
   );
 };
 

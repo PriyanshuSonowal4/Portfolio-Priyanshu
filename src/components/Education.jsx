@@ -1,16 +1,24 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const Education = () => {
   return (
-    <div className="mt-10 text-left">
+    <motion.div
+      className="mt-10 text-left"
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 0.7, ease: "easeOut" }}
+    >
         <div className="h-1 w-full  bg-amber-200 bg-gradient-to-r from-indigo-600 to-pink-400 shadow-2xl shadow-sky-500" />
 
       <div className="w-full mx-auto mt-6 lg:w-5/12 lg:pr-12">
-        <div
-          initial={{ opacity: 0 }}
-          transition={{ delay: 0.5, duration: 1 }}
-          whileInView={{ opacity: 1 }}
+        <motion.div
           className="bg-white/20 backdrop-blur-xl border border-white/30 rounded-3xl p-8 shadow-2xl"
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.7, ease: "easeOut" }}
         >
           <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-green-500 to-emerald-500 text-white rounded-full text-sm font-semibold mb-6">
             <div className="w-2 h-2 bg-white rounded-full mr-2" />
@@ -55,18 +63,22 @@ const Education = () => {
                 "Web Development",
                 "Software Engineering",
               ].map((skill, index) => (
-                <span
+                <motion.span
                   key={index}
                   className="px-3 py-1 bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-300/30 rounded-full text-sm font-medium text-[#0D1B2A]"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.2 }}
+                  transition={{ duration: 0.5, delay: index * 0.07, ease: "easeOut" }}
                 >
                   {skill}
-                </span>
+                </motion.span>
               ))}
             </div>
           </div>
-        </div>
+  </motion.div>
       </div>
-    </div>
+  </motion.div>
   );
 };
 
