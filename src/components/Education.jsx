@@ -10,7 +10,7 @@ const Education = () => {
       viewport={{ once: true, amount: 0.3 }}
       transition={{ duration: 0.7, ease: "easeOut" }}
     >
-        <div className="h-1 w-full  bg-amber-200 bg-gradient-to-r from-indigo-600 to-pink-400 shadow-2xl shadow-sky-500" />
+      <div className="h-1 w-full  bg-amber-200 bg-gradient-to-r from-indigo-600 to-pink-400 shadow-2xl shadow-sky-500" />
 
       <div className="w-full mx-auto mt-6 lg:w-5/12 lg:pr-12">
         <motion.div
@@ -51,34 +51,9 @@ const Education = () => {
               </span>
             </div>
           </div>
-
-          <div className="mt-6 pt-6 border-t border-white/20">
-            <h4 className="text-lg font-semibold text-[#0D1B2A] mb-3">
-              Key Areas of Study:
-            </h4>
-            <div className="flex flex-wrap gap-2">
-              {[
-                "Artificial Intelligence and Machine Learning",
-                "Database Management",
-                "Web Development",
-                "Software Engineering",
-              ].map((skill, index) => (
-                <motion.span
-                  key={index}
-                  className="px-3 py-1 bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-300/30 rounded-full text-sm font-medium text-[#0D1B2A]"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, amount: 0.2 }}
-                  transition={{ duration: 0.5, delay: index * 0.07, ease: "easeOut" }}
-                >
-                  {skill}
-                </motion.span>
-              ))}
-            </div>
-          </div>
-  </motion.div>
+        </motion.div>
       </div>
-  </motion.div>
+    </motion.div>
   );
 };
 
