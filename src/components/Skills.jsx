@@ -2,22 +2,20 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const skills = [
-  "Python",
-  "JAVA",
-  "SQL",
-  "Scikit-Learn",
-  "ML",
-  "Deep Learning",
-  "NLP",
-  "CV",
-  "C",
-  "JAVASCRIPT",
-  "MongoDB",
-  "PostgreSQL",
   "HTML",
   "CSS",
-  "GIT",
-  "GITHUB",
+  "JavaScript",
+  "React",
+  "Next.js",
+  "Node.js",
+  "Express.js",
+  "MongoDB",
+  "PostgreSQL",
+  "SQL",
+  "Git",
+  "GitHub",
+  "Tailwind CSS",
+  "TypeScript",
 ];
 
 const Skills = () => {
@@ -59,7 +57,7 @@ const Skills = () => {
           Crypto Trading
         </div>
       </div>
-  </motion.div>
+    </motion.div>
   );
 };
 

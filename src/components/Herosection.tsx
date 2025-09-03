@@ -21,14 +21,16 @@ const Herosection = () => {
           })}{" "}
         </span>
         <span className="text-black  text-left font-semibold text-xl">
-          I’m an aspiring AI/ML Engineer with a strong foundation in Python,
-          Java, C, and SQL, and practical experience working with Scikit-Learn,
-          data analysis, and model building. My expertise extends to
-          mathematics, statistics, and data structures, which I apply to develop
-          intelligent systems and solve real-world problems. I enjoy exploring
-          machine learning, deep learning, NLP, and computer vision, and I’m
-          passionate about continuously learning, experimenting, and building
-          AI-powered solutions that create meaningful impact.
+          I’m an aspiring Web Developer with a strong foundation in HTML, CSS,
+          JavaScript, and React, along with practical experience working with
+          Node.js, Express.js, and MongoDB to build dynamic and responsive
+          applications. My expertise extends to data structures,
+          problem-solving, and modern frameworks, which I apply to create
+          efficient, scalable, and user-friendly web solutions. I enjoy
+          exploring frontend and backend development, UI/UX design, and
+          full-stack project building, and I’m passionate about continuously
+          learning, experimenting, and developing web applications that deliver
+          real-world impact.
         </span>
         <div className="h-1 w-full bg-amber-200 bg-gradient-to-r from-indigo-600 to-pink-400 shadow-2xl shadow-sky-500" />
 
